@@ -49,9 +49,57 @@ let currentLang = "ru";
 let isOpened = false;
 let confettiLayer = null;
 
+function getQueryParam(name) {
+  const query = window.location.search.startsWith("?")
+    ? window.location.search.slice(1)
+    : "";
+  const normalizedQuery = query.replace(/\?/g, "&");
+  const params = new URLSearchParams(normalizedQuery);
+  return params.get(name);
+}
+
+function decodeLatinBytes(input, encoding) {
+  try {
+    const bytes = Uint8Array.from(input, (ch) => ch.charCodeAt(0) & 0xff);
+    return new TextDecoder(encoding, { fatal: false }).decode(bytes);
+  } catch (_) {
+    return input;
+  }
+}
+
+function normalizeGuestName(rawName) {
+  if (!rawName) {
+    return "";
+  }
+
+  const base = rawName.replace(/\+/g, " ").trim();
+  const variants = new Set([base]);
+
+  try {
+    variants.add(decodeURIComponent(base));
+  } catch (_) {}
+
+  variants.add(decodeLatinBytes(base, "utf-8"));
+  variants.add(decodeLatinBytes(base, "windows-1251"));
+
+  let best = base;
+  let bestScore = -1;
+
+  variants.forEach((value) => {
+    const cyr = (value.match(/[\u0400-\u04FF]/g) || []).length;
+    const bad = (value.match(/[\uFFFD?]/g) || []).length;
+    const score = cyr * 2 - bad;
+    if (score > bestScore) {
+      bestScore = score;
+      best = value;
+    }
+  });
+
+  return best.trim();
+}
+
 function resolveInitialLanguage() {
-  const params = new URLSearchParams(window.location.search);
-  const lang = params.get("lang");
+  const lang = getQueryParam("lang");
   return lang === "ru" || lang === "qtr" ? lang : "ru";
 }
 
@@ -62,13 +110,12 @@ function setQueryLanguage(lang) {
 }
 
 function resolveGuestName() {
-  const params = new URLSearchParams(window.location.search);
-  const nameParam = params.get("name");
+  const nameParam = getQueryParam("name");
   if (!nameParam) {
     return "";
   }
 
-  return nameParam.trim();
+  return normalizeGuestName(nameParam);
 }
 
 function applyGuestName(lang) {
