@@ -58,12 +58,58 @@ function getQueryParam(name) {
   return params.get(name);
 }
 
+function getRawQueryParam(name) {
+  const query = window.location.search.startsWith("?")
+    ? window.location.search.slice(1)
+    : "";
+  const normalizedQuery = query.replace(/\?/g, "&");
+  const segments = normalizedQuery.split("&");
+
+  for (const segment of segments) {
+    if (!segment) {
+      continue;
+    }
+
+    const eqIndex = segment.indexOf("=");
+    const rawKey = eqIndex >= 0 ? segment.slice(0, eqIndex) : segment;
+    const rawValue = eqIndex >= 0 ? segment.slice(eqIndex + 1) : "";
+
+    if (rawKey === name) {
+      return rawValue;
+    }
+  }
+
+  return null;
+}
+
 function decodeLatinBytes(input, encoding) {
   try {
     const bytes = Uint8Array.from(input, (ch) => ch.charCodeAt(0) & 0xff);
     return new TextDecoder(encoding, { fatal: false }).decode(bytes);
   } catch (_) {
     return input;
+  }
+}
+
+function decodePercentBytes(rawValue, encoding) {
+  try {
+    const bytes = [];
+    for (let i = 0; i < rawValue.length; i += 1) {
+      const char = rawValue[i];
+      if (
+        char === "%" &&
+        i + 2 < rawValue.length &&
+        /^[0-9A-Fa-f]{2}$/.test(rawValue.slice(i + 1, i + 3))
+      ) {
+        bytes.push(parseInt(rawValue.slice(i + 1, i + 3), 16));
+        i += 2;
+      } else {
+        bytes.push(char.charCodeAt(0) & 0xff);
+      }
+    }
+    return new TextDecoder(encoding, { fatal: false }).decode(Uint8Array.from(bytes));
+  } catch (_) {
+    return rawValue;
   }
 }
 
@@ -79,6 +125,8 @@ function normalizeGuestName(rawName) {
     variants.add(decodeURIComponent(base));
   } catch (_) {}
 
+  variants.add(decodePercentBytes(rawName, "utf-8").replace(/\+/g, " "));
+  variants.add(decodePercentBytes(rawName, "windows-1251").replace(/\+/g, " "));
   variants.add(decodeLatinBytes(base, "utf-8"));
   variants.add(decodeLatinBytes(base, "windows-1251"));
 
@@ -110,12 +158,12 @@ function setQueryLanguage(lang) {
 }
 
 function resolveGuestName() {
-  const nameParam = getQueryParam("name");
-  if (!nameParam) {
+  const rawNameParam = getRawQueryParam("name");
+  if (!rawNameParam) {
     return "";
   }
 
-  return normalizeGuestName(nameParam);
+  return normalizeGuestName(rawNameParam);
 }
 
 function applyGuestName(lang) {
