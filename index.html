@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Свадебное приглашение</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Infant:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="hero">
+    <div class="grain"></div>
+
+    <div class="language-toggle" role="group" aria-label="Выбор языка">
+      <button class="lang-btn is-active" type="button" data-lang="ru">Русский</button>
+      <button class="lang-btn" type="button" data-lang="qtr">Крымскотатарский</button>
+    </div>
+
+    <section class="envelope-popup" aria-label="Конверт с приглашением">
+      <p class="eyebrow" data-i18n="eyebrow">Вы приглашены</p>
+      <h1 data-i18n="title">Наша свадьба</h1>
+
+      <button class="envelope heartbeat" type="button" data-i18n-aria="openInviteAria" aria-label="Открыть приглашение">
+        <span class="envelope-back"></span>
+        <span class="envelope-flap"></span>
+        <span class="seal">❤</span>
+      </button>
+
+      <p class="hint" data-i18n="hintInitial">Нажмите на конверт</p>
+    </section>
+
+    <section class="invite-screen" aria-live="polite">
+      <button class="invite-back" type="button" data-i18n="backToEnvelope">← К конверту</button>
+      <article class="invite-card">
+        <img class="monogram-logo" src="./logo.png" alt="Логотип пары">
+        <h2 class="couple" data-i18n="couple">RUSTEM & AYSE</h2>
+        <p class="invite-word" data-i18n="inviteWord">приглашают</p>
+
+        <p class="name-line">
+          <span id="guestName">Аким ве Фериде</span>
+        </p>
+
+        <p class="invite-text" data-i18n="inviteText">
+          Сизны никях тойюна джан-юректен давет этемиз! Бу бахтлы куньде арамызда сизны де корьмеге бизлер ичюн буюк бир къуванч олур!
+        </p>
+
+        <p class="meta-label" data-i18n="dateLabel">Той акьшамы:</p>
+        <p class="date-row">18 | 04 | 2026</p>
+        <p class="meta-label" data-i18n="timeLabel">Саат</p>
+        <p class="time-row">18:00</p>
+
+        <p class="venue-name">ESHIL ADA</p>
+        <p class="venue-type" data-i18n="venueType">Банкет салону</p>
+        <p class="venue-address" data-i18n="venueAddress">Акъмесджит ш., Байрам сокъагъы, 5</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
