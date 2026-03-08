@@ -6,7 +6,7 @@ const translations = {
     title: "Наша свадьба",
     hintInitial: "Нажмите на конверт",
     hintOpened: "Приглашение открыто",
-    couple: "RUSTEM & AYSE",
+    couple: "RÜSTEM & AYŞE",
     inviteWord: "Уважаемые",
     inviteText:
       "С любовью приглашаем вас разделить с нами самый важный день нашей жизни!",
@@ -18,22 +18,22 @@ const translations = {
     backToEnvelope: "← К конверту"
   },
   qtr: {
-    pageTitle: "Toy daveti",
-    openInviteAria: "Davetni aç",
-    eyebrow: "Siz davet etildiniz",
-    title: "Bizim toy",
-    hintInitial: "Konvertke basyñız",
-    hintOpened: "Davet açıldı",
-    couple: "RUSTEM & AYSE",
-    inviteWord: "Ürbmetli",
+    pageTitle: "Той давети",
+    openInviteAria: "Даветини ачиниз",
+    eyebrow: "Сиз давет етильдиниз",
+    title: "Бизим тоюмузгъа",
+    hintInitial: "Конвертини ачиниз",
+    hintOpened: "Давет ачилды",
+    couple: "RÜSTEM & AYŞE",
+    inviteWord: "Урьметли",
     inviteText:
-      "Sizni nikyah toyuna can-yürekten davet etemiz! Bu bahtlı künde aramızda sizni de körmege bizler içün büyük bir quvanç olur!",
-    dateLabel: "Toy aqşamı:",
-    timeLabel: "Saat",
-    venueType: "Banket salonı",
-    venueAddress: "Aqmescit ş., Bayram sokağı, 5",
+      "СИЗНИ НИКЯХ ТОЮНА ДЖАН-ЮРЕКТЕН ДАВЕТ ЭТЕМИЗ! БУ БАХТЛЫ КУНЪДЕ АРАМЫЗДА СИЗНИ ДЕ КОРЬМЕГЕ БИЗЛЕР ИЧЮН БУЮК БИР КЪУВЫНЧ ОЛУР!",
+    dateLabel: "ТОЙ АКЪШАМЫ:",
+    timeLabel: "СААТ",
+    venueType: "БФНКЕТ САЛОНЫ",
+    venueAddress: "Акъмесджит ш., Байрам сокъфгъы, 5",
     guestFallback: "Qıymetli qonaqlar",
-    backToEnvelope: "← Konvertke qayt"
+    backToEnvelope: "← Конвертке къайтмакъ"
   }
 };
 

@@ -471,7 +471,7 @@ h1 {
   }
 
   .invite-card {
-    max-height: min(84vh, 700px);
+    max-height: min(98vh, 700px);
     padding: 12px 12px 12px;
   }
 
