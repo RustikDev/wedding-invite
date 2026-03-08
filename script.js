@@ -31,7 +31,7 @@ const translations = {
     dateLabel: "ТОЙ АКЪШАМЫ:",
     timeLabel: "СААТ",
     venueType: "БФНКЕТ САЛОНЫ",
-    venueAddress: "Акъмесджит ш., Байрам сокъфгъы, 5",
+    venueAddress: "Акъмесджит ш., Байрам сокъагъы, 5",
     guestFallback: "Qıymetli qonaqlar",
     backToEnvelope: "← Конвертке къайтмакъ"
   }
