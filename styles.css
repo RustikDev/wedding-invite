@@ -235,10 +235,11 @@ h1 {
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 18px 55px rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: 18px 24px 20px;
+  padding: 24px;
   color: #101010;
   animation: card-pop 700ms cubic-bezier(0.2, 1, 0.35, 1) both;
   border-radius: 20px;
+  margin: 40px 0;
 }
 
 .invite-back {
@@ -451,7 +452,6 @@ h1 {
   .invite-card {
     width: 96vw;
     max-height: min(82vh, 730px);
-    padding: 14px 12px 14px;
   }
 
   .invite-back {
@@ -474,8 +474,7 @@ h1 {
   }
 
   .invite-card {
-    max-height: min(98vh, 700px);
-    padding: 12px 12px 12px;
+    max-height: min(96vh, 700px);
   }
 
   .monogram-logo {
