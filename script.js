@@ -30,7 +30,7 @@ const translations = {
       "СИЗНИ НИКЯХ ТОЮНА ДЖАН-ЮРЕКТЕН ДАВЕТ ЭТЕМИЗ! БУ БАХТЛЫ КУНЪДЕ АРАМЫЗДА СИЗНИ ДЕ КОРЬМЕГЕ БИЗЛЕР ИЧЮН БУЮК БИР КЪУВЫНЧ ОЛУР!",
     dateLabel: "ТОЙ АКЪШАМЫ:",
     timeLabel: "СААТ",
-    venueType: "БФНКЕТ САЛОНЫ",
+    venueType: "БАНКЕТ САЛОНЫ",
     venueAddress: "Акъмесджит ш., Байрам сокъагъы, 5",
     guestFallback: "Qıymetli qonaqlar",
     backToEnvelope: "← Конвертке къайтмакъ"
