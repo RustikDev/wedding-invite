@@ -3,7 +3,7 @@ const translations = {
     pageTitle: "Свадебное приглашение",
     openInviteAria: "Открыть приглашение",
     eyebrow: "Вы приглашены",
-    title: "Наша свадьба",
+    title: "на нашу свадьбу",
     hintInitial: "Нажмите на конверт",
     hintOpened: "Приглашение открыто",
     couple: "RÜSTEM & AYŞE",
