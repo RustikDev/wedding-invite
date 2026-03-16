@@ -227,6 +227,11 @@ h1 {
   transform: translateY(0) scale(1);
 }
 
+.hero.show-invite {
+  min-height: calc(100vh + 120px);
+  padding-bottom: 120px;
+}
+
 .invite-card {
   width: min(92vw, 620px);
   max-height: min(82vh, 860px);
@@ -239,7 +244,7 @@ h1 {
   color: #101010;
   animation: card-pop 700ms cubic-bezier(0.2, 1, 0.35, 1) both;
   border-radius: 20px;
-  margin: 40px 0;
+  margin: 26px 0 72px;
 }
 
 .invite-back {
@@ -457,7 +462,7 @@ h1 {
   }
 
   .invite-back {
-    top: 8px;
+    top: 14px;
     left: 8px;
     font-size: 0.95rem;
     padding: 6px 10px;

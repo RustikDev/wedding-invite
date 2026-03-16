@@ -15,7 +15,6 @@
     venueType: "Банкетный зал",
     venueAddress: "г. Симферополь, ул. байрам, 5",
     guestFallback: "Дорогие гости",
-    backToEnvelope: "← К конверту"
   },
   qtr: {
     pageTitle: "Той давети",
@@ -33,7 +32,6 @@
     venueType: "БАНКЕТ САЛОНЫ",
     venueAddress: "Акъмесджит ш., байрам сокъагъы, 5",
     guestFallback: "Qıymetli qonaqlar",
-    backToEnvelope: "← Конвертке къайтмакъ"
   }
 };
 
