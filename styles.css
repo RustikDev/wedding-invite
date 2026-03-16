@@ -228,7 +228,7 @@ h1 {
 }
 
 .hero.show-invite {
-  min-height: calc(100vh + 120px);
+  min-height: calc(100vh + 60px);
   padding-bottom: 120px;
 }
 
@@ -295,13 +295,12 @@ h1 {
 
 .name-line {
   margin: 0 auto 14px;
-  width: min(86%, 480px);
   min-height: 1.9rem;
   border-bottom: 1px solid #4c4c4c;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding: 0 8px 3px;
+  padding: 0 0px 3px;
 }
 
 #guestName {
