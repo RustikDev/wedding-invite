@@ -351,6 +351,7 @@ h1 {
 
 .venue-address {
   margin-top: 2px;
+  text-transform: lowercase;
 }
 
 @keyframes rise-in {
@@ -445,7 +446,6 @@ h1 {
   }
 
   .envelope-popup {
-    width: 95vw;
     padding: 28px 16px 22px;
   }
 
