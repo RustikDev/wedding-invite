@@ -344,14 +344,16 @@ h1 {
 .venue-type,
 .venue-address {
   margin: 0;
-  text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: clamp(0.95rem, 2.05vw, 1.16rem);
 }
 
+.venue-type {
+  text-transform: uppercase;
+}
+
 .venue-address {
   margin-top: 2px;
-  text-transform: lowercase;
 }
 
 @keyframes rise-in {

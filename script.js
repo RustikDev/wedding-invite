@@ -1,4 +1,4 @@
-const translations = {
+﻿const translations = {
   ru: {
     pageTitle: "Свадебное приглашение",
     openInviteAria: "Открыть приглашение",
@@ -13,7 +13,7 @@ const translations = {
     dateLabel: "Вечер свадьбы:",
     timeLabel: "Время",
     venueType: "Банкетный зал",
-    venueAddress: "г. Симферополь, ул. Байрам, 5",
+    venueAddress: "г. Симферополь, ул. байрам, 5",
     guestFallback: "Дорогие гости",
     backToEnvelope: "← К конверту"
   },
@@ -31,7 +31,7 @@ const translations = {
     dateLabel: "ТОЙ АКЪШАМЫ:",
     timeLabel: "СААТ",
     venueType: "БАНКЕТ САЛОНЫ",
-    venueAddress: "Акъмесджит ш., Байрам сокъагъы, 5",
+    venueAddress: "Акъмесджит ш., байрам сокъагъы, 5",
     guestFallback: "Qıymetli qonaqlar",
     backToEnvelope: "← Конвертке къайтмакъ"
   }
